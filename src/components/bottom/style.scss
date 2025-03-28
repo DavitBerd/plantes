@@ -1,0 +1,99 @@
+.BottomMain {
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+
+  .BottomContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+
+    div {
+      border: 1px solid rgba(255, 255, 255, 1);
+      width: 255px;
+      height: 128px;
+      padding: 0px 20px;
+      border-width: 1px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .name {
+        font-family: Spartan;
+        font-weight: 700;
+        font-size: 11px;
+        line-height: 25px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        opacity: 0.5;
+      }
+
+      .value {
+        font-family: Antonio;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 100%;
+        letter-spacing: -1.5px;
+        text-transform: uppercase;
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .BottomMain {
+    .BottomContainer {
+      width: 90%;
+      justify-content: center;
+
+      div {
+        width: 200px;
+        height: 100px;
+        margin: 10px;
+
+        .name {
+          font-size: 10px;
+        }
+
+        .value {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .BottomMain {
+    .BottomContainer {
+      div {
+        width: 90%;
+        height: auto;
+        padding: 10px;
+        margin-bottom: 15px;
+
+        .name {
+          font-size: 9px;
+        }
+
+        .value {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .BottomMain {
+    .BottomContainer {
+      flex-direction: column;
+      div {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+  }
+}

@@ -1,0 +1,250 @@
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 70%;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    width: 70%;
+
+    .images {
+      position: relative;
+
+      .planet {
+        position: relative;
+        display: inline-block;
+
+        img {
+          display: block;
+          max-width: 80%;
+        }
+
+        .abs {
+          position: absolute;
+          top: 50%;
+          left: 60%;
+          transform: translate(-50%, -50%);
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+    }
+
+    .infoMain {
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+
+      .title {
+        font-family: Antonio;
+        font-weight: 400;
+        font-size: 80px;
+        line-height: 100%;
+        letter-spacing: 0px;
+        text-transform: uppercase;
+        margin: 0;
+      }
+
+      .description {
+        font-family: Spartan;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 25px;
+        letter-spacing: 0px;
+        color: rgba(255, 255, 255, 1);
+      }
+
+      .sources {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: #838392;
+
+        p {
+          font-family: Spartan;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 25px;
+          letter-spacing: 0px;
+        }
+
+        a {
+          font-family: Spartan;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 25px;
+          letter-spacing: 0px;
+          text-decoration: underline;
+          color: #838392;
+        }
+      }
+
+      .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        .button {
+          border: 1px solid rgba(255, 255, 255, 1);
+          display: flex;
+          align-items: center;
+          padding: 5px 50px;
+          gap: 20px;
+          background-color: transparent;
+          color: white;
+          cursor: pointer;
+          
+          &:hover {
+            background: #313148;
+            border-color: #313148;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+.container1 {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 215px;
+  left: 70px;
+
+  .pointer {
+    position: absolute;
+    bottom: 125px;
+    left: 63px;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 30px solid #5a7d8c;
+  }
+
+  .circle-container {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    background: #5a7d8c;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 80%;
+      height: 80%;
+      border-radius: 50%;
+      border: 5px white solid;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .main {
+    height: auto;
+
+    .container {
+      flex-direction: column;
+      width: 90%;
+      align-items: center;
+      .infoMain {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+
+        .title {
+          font-size: 48px;
+          width: 100%;
+        }
+
+        .description {
+          font-size: 12px;
+          width: 70%;
+        }
+
+        .sources {
+          width: 100%;
+          margin: 10px 0;
+        }
+
+        .buttons {
+          width: 100%;
+        }
+      }
+    }
+
+    .images {
+      margin: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container1 {
+      top: 180px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+@media (max-width: 480px) {
+  .main {
+    gap: 500px;
+    position: relative;
+    margin-top: 100px;
+    .container {
+      .infoMain {
+        div {
+          margin-top: 50px;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .sources{
+           flex-direction: row;
+           justify-content: center;
+          }
+        }
+        .buttons {
+          position: absolute;
+          flex-direction: row;
+          justify-content: center;
+       
+          align-items: flex-end;
+          bottom: 105%;
+          left: 0;
+          border-bottom: 2px #34344b solid;
+          .button {
+               padding: 0;
+               background-color: transparent !important;
+            color: #838392;
+            .inv {
+              display: none;
+            }
+            width: 20%;
+            font-size: 9px;
+            border: transparent;
+            justify-content: center;
+            &:hover{
+              color: white;
+              background-color: transparent;
+            }
+            &.active{
+              background-color: transparent;
+              
+            }
+          }
+          
+        }
+      }
+    }
+  }
+}
