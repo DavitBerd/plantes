@@ -12,25 +12,19 @@ const Navigation = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // Проверка ширины экрана
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 768px)");
 
-    // Устанавливаем начальное значение
     setIsMobile(mediaQuery.matches);
-
-    // Обработчик изменения размера экрана
     const handleResize = (event: MediaQueryListEvent) => {
       setIsMobile(event.matches);
       if (!event.matches) {
-        setIsMenuOpen(false); // Закрываем меню, если экран стал больше 768px
+        setIsMenuOpen(false);
       }
     };
 
-    // Добавляем слушатель события
     mediaQuery.addEventListener("change", handleResize);
 
-    // Очищаем слушатель при размонтировании
     return () => {
       mediaQuery.removeEventListener("change", handleResize);
     };
